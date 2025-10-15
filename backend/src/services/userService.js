@@ -1,13 +1,13 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const UserModel = require("../models/userModel");
+const userModel = require("../models/userModel");
 
 class UserService {
 
-    static async registerUser(user) {
+    static async registrarUser(user) {
         const { email, password, role } = user;
     
-        const existing = await UserModel.findByEmail(email);
+        const existing = await userModel.findByEmail(email);
         if (existing) {
             throw new Error('Usuário já existe');
         }
@@ -16,14 +16,14 @@ class UserService {
        
         user.password = hashed;
     
-        const id = await UserModel.create(user);
+        const id = await userModel.criar(user);
         
         return { message: 'Usuário registrado com sucesso', id };
     }
    
     static async loginUser({ email, password }) {
        
-        const user = await UserModel.findByEmail(email);
+        const user = await userModel.findByEmail(email);
         if (!user) {
             throw new Error('Usuário não encontrado');
         }
