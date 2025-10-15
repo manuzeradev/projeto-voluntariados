@@ -82,7 +82,7 @@ class EventoService {
       return resultado
     } catch (error) {
       console.error(error)
-      throw new Error('Erro ao inscrever no evento')
+      throw new Error('Erro ao se inscrever no evento')
     }
   }
 
@@ -97,7 +97,7 @@ class EventoService {
       return resultado
     } catch (error) {
       console.error(error)
-      throw new Error('Erro ao desinscrever no evento')
+      throw new Error('Erro ao se desinscrever no evento')
     }
   }
 }

@@ -23,7 +23,7 @@ class EventoController {
 
   static async deletarEvento(req, res) {
     try {
-      const resultado = await EventoService.deletarEvent(req.params.id)
+      const resultado = await EventoService.deletarEvento(req.params.id)
       return res.status(200).json(result)
     } catch (error) {
       return res.status(404).json({ message: error.message })
