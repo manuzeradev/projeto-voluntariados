@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { http } from '../api/http'
-import '../Table.css'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../auth/AuthContext'
 

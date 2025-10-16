@@ -3,7 +3,7 @@ const EventoController = require('../controllers/evento.controller')
 const {
   authenticateToken,
   authorizeRole,
-} = require('../middlewares/auth.middleware')
+} = require('../middlewares/auth.middlewares.js')
 
 const router = express.Router()
 

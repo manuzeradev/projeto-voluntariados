@@ -1,6 +1,7 @@
 @baseURL = http://localhost:3000
+
 ### Rota pública
-GET {{baseURL}}/eventos
+GET {{baseURL}}/events
 Content-Type: application/json
 
 ### Login do usuário

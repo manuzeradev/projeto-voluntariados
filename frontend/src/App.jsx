@@ -34,7 +34,7 @@ const router = createBrowserRouter([
       { index: true, element: <Login /> },
       { path: 'login', element: <Login /> },
       { path: 'forbidden', element: <Forbidden /> },
-      { path: 'events', element: <Eventos /> },
+      { path: 'events', element: <eventos /> },
       {
         path: 'dashboard',
         element: (
@@ -69,16 +69,6 @@ const router = createBrowserRouter([
           <RequireAuth>
             <RequireRole role="admin">
               <EditarEvento />
-            </RequireRole>
-          </RequireAuth>
-        ),
-      },
-      {
-        path: 'Users',
-        element: (
-          <RequireAuth>
-            <RequireRole role="admin">
-              <Users />
             </RequireRole>
           </RequireAuth>
         ),

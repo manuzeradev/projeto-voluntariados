@@ -3,7 +3,7 @@ const UserController = require('../controllers/user.controller')
 const {
   authenticateToken,
   authorizeRole,
-} = require('../middlewares/auth.middleware')
+} = require('../middlewares/auth.middlewares')
 const router = express.Router()
 
 /**
